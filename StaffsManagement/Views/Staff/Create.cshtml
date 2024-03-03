@@ -1,0 +1,19 @@
+﻿@model Staff
+
+<h1>Create Staff</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="StaffName"></label>
+        <input asp-for="StaffName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="StaffAge"></label>
+        <input asp-for="StaffAge" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="StaffAddress"></label>
+        <input asp-for="StaffAddress" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

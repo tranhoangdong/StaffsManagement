@@ -1,0 +1,30 @@
+﻿@model List<Staff>
+
+<h1>Staff List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Staff ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+            <tr>
+                <td>@staff.StaffID</td>
+                <td>@staff.StaffName</td>
+                <td>@staff.StaffAge</td>
+                <td>@staff.StaffAddress</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@staff.StaffID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@staff.StaffID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
